@@ -1,16 +1,17 @@
+<!-- index.html for Pari -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My Web App</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <title>Project Blossom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(120deg, #fdfbfb, #ebedee);
+      color: #333;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,48 +21,38 @@
     }
 
     h1 {
-      font-family: 'Orbitron', sans-serif;
       font-size: 3em;
       margin-bottom: 0.5em;
-      animation: fadeInDown 1.2s ease-in-out;
     }
 
-    p {
-      font-size: 1.3em;
-      max-width: 600px;
-      animation: fadeInUp 1.4s ease-in-out;
+    .container {
+      padding: 30px 40px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .btn {
-      margin-top: 2em;
+    button {
+      margin-top: 25px;
       padding: 10px 25px;
-      background: #00c6ff;
-      color: #000;
+      background: #ff69b4;
       border: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 5px;
+      color: white;
+      font-size: 1em;
       cursor: pointer;
-      transition: background 0.3s;
     }
 
-    .btn:hover {
-      background: #0072ff;
+    button:hover {
+      background: #ff1493;
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Welcome to My Web App</h1>
-  <p>This is deployed using <strong>AWS Amplify</strong> and GitHub. More cool stuff coming soon!</p>
-  <button class="btn" onclick="alert('Thanks for visiting!')">Click Me</button>
+  <div class="container">
+    <h1>🌸 Project Blossom</h1>
+    <p>This beautiful web app is designed by PARI and deployed using GitHub & AWS Amplify. Clean, responsive, and ready to impress.</p>
+    <button onclick="alert('Welcome, Pari!')">Explore</button>
+  </div>
 </body>
 </html>
