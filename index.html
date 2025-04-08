@@ -3,65 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My Web App</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <title>Pari's Firebase Hub</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fdeff9, #ecb4ff);
+      color: #2c003e;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .hero {
       text-align: center;
+      margin-top: 4rem;
+      animation: fadeIn 1.2s ease;
     }
 
     h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3em;
-      margin-bottom: 0.5em;
-      animation: fadeInDown 1.2s ease-in-out;
+      font-size: 3rem;
+      color: #b10086;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.3em;
-      max-width: 600px;
-      animation: fadeInUp 1.4s ease-in-out;
+      font-size: 1.2rem;
+      color: #5e366e;
     }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .btn {
-      margin-top: 2em;
-      padding: 10px 25px;
-      background: #00c6ff;
-      color: #000;
+    .button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      background: #b10086;
+      color: #fff;
       border: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 25px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
-    .btn:hover {
-      background: #0072ff;
+    .button:hover {
+      background: #7c0266;
+    }
+
+    .card-container {
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #7b1fa2;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6d6875;
+      padding: 2rem 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .card {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🚀 Welcome to My Web App</h1>
-  <p>This is deployed using <strong>AWS Amplify</strong> and GitHub. More cool stuff coming soon!</p>
-  <button class="btn" onclick="alert('Thanks for visiting!')">Click Me</button>
+  <div class="hero">
+    <h1>🌸 Welcome to Pari's Firebase Hub</h1>
+    <p>Secure authentication, styled with love and sparkle ✨</p>
+    <a href="#" class="button">Get Started</a>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>🚀 Fast Signups</h3>
+      <p>Create users instantly with secure Firebase Auth integration.</p>
+    </div>
+    <div class="card">
+      <h3>🔍 User Profiles</h3>
+      <p>Fetch details with just a UID. Quick and simple!</p>
+    </div>
+    <div class="card">
+      <h3>💜 Built by Pari</h3>
+      <p>Elegant UI, strong backend — all coded with 💖.</p>
+    </div>
+  </div>
+
+  <footer>
+    Made with 💖 by Pari | Powered by Firebase & Amplify
+  </footer>
 </body>
 </html>
